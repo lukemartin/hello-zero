@@ -10,7 +10,9 @@
     "dev:db-down": "docker compose --env-file .env -f ./docker/docker-compose.yml down",
     "dev:clean": "source .env && docker volume rm -f docker_zstart_pgdata && rm -rf \"${ZERO_REPLICA_FILE}\"*",
     "build": "tsc -b && vite build",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "start": "npm run preview"
   },
   "dependencies": {
     "@rocicorp/zero": "^0.13.2025013101",
